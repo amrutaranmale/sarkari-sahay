@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Scheme {
+  id              String   @id @default(cuid())
+  name            String
+  nameHi          String?
+  slug            String   @unique
+  level           String   // central | state
+  state           String?  // null for central schemes
+  category        String
+  summary         String
+  summaryHi       String?
+  benefitAmount   String?
+  benefitType     String?
+  applicationUrl  String
+  ministry        String?
+
+  minAge          Int?
+  maxAge          Int?
+  minIncome       Int?
+  maxIncome       Int?
+  castes          Json     // ["general","obc","sc","st","ews","all"]
+  genders         Json
+  occupations     Json
+  disabilityRequired Boolean @default(false)
+
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([level])
+  @@index([state])
+  @@index([category])
+  @@index([isActive])
+}
