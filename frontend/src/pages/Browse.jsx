@@ -16,7 +16,12 @@ export default function Browse() {
 
   useEffect(() => {
     const cat = searchParams.get('category');
-    if (cat) setFilters((f) => ({ ...f, category: cat }));
+    const search = searchParams.get('search') || '';
+    setFilters((f) => ({
+      ...f,
+      ...(cat ? { category: cat } : {}),
+      search,
+    }));
   }, [searchParams]);
 
   const { schemes, loading, error } = useSchemes(filters);

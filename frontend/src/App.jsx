@@ -5,6 +5,7 @@ import SchemeDetail from './pages/SchemeDetail';
 import Browse from './pages/Browse';
 import Saved from './pages/Saved';
 import { useSavedSchemes } from './hooks/useSavedSchemes';
+import AssistanceChatbot from './components/AssistanceChatbot';
 
 function Header() {
   const location = useLocation();
@@ -55,6 +56,13 @@ function Header() {
               )}
             </Link>
           ))}
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent('open-assistance-chat'))}
+            className="hidden rounded-xl border border-navy/15 px-3 py-2 text-sm font-semibold text-navy/80 transition-colors hover:bg-navy/5 sm:inline-flex"
+          >
+            Assistance
+          </button>
           <Link
             to="/#check"
             className="btn-primary hidden rounded-xl px-4 py-2 text-sm font-bold text-white sm:inline-flex"
@@ -119,6 +127,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <AssistanceChatbot />
     </div>
   );
 }
