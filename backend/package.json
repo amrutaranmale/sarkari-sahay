@@ -5,8 +5,10 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/index.js",
     "start": "node src/index.js",
+    "backend:watch": "node --watch src/index.js",
+    "frontend": "npm run dev --prefix ../frontend",
+    "dev": "concurrently \"npm run backend:watch\" \"npm run frontend\"",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "node src/seed/schemes.seed.js",
@@ -19,6 +21,7 @@
     "express": "^4.21.2"
   },
   "devDependencies": {
-    "prisma": "^6.5.0"
+    "prisma": "^6.5.0",
+    "concurrently": "^8.2.2"
   }
 }
