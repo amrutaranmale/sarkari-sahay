@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-const API = '/api';
+const API = 'https://sarkari-sahay.onrender.com/api';
 
 export function useEligibility() {
   const [results, setResults] = useState([]);
