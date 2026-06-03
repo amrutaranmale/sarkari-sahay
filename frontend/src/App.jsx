@@ -105,7 +105,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-navy/10 pt-8 text-sm text-navy/50">
-          <p>© {new Date().getFullYear()} SarkariSahay · Made with ❤️ for India 🇮🇳</p>
+          <p>© {new Date().getFullYear()} SarkariSahay by Amruta Ranmale · Made with ❤️ for India 🇮🇳</p>
           <p className="flex gap-2">
             <span className="rounded bg-saffron/20 px-2 py-0.5 text-saffron-dark">Central</span>
             <span className="rounded bg-green-india/20 px-2 py-0.5 text-green-india">State</span>
