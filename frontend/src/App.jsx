@@ -4,6 +4,7 @@ import Results from './pages/Results';
 import SchemeDetail from './pages/SchemeDetail';
 import Browse from './pages/Browse';
 import Saved from './pages/Saved';
+import Contact from './pages/Contact'; // <-- Step 1: Naya Contact page import kiya
 import { useSavedSchemes } from './hooks/useSavedSchemes';
 import AssistanceChatbot from './components/AssistanceChatbot';
 
@@ -92,6 +93,8 @@ function Footer() {
               <li><Link to="/" className="hover:text-saffron-dark">Eligibility check</Link></li>
               <li><Link to="/browse" className="hover:text-saffron-dark">Browse schemes</Link></li>
               <li><Link to="/saved" className="hover:text-saffron-dark">Saved schemes</Link></li>
+              {/* Step 2: Google AdSense ke liye Footer mein link jodh diya */}
+              <li><Link to="/contact" className="hover:text-saffron-dark font-medium text-orange-600">Contact Us</Link></li>
             </ul>
           </div>
           <div>
@@ -123,6 +126,8 @@ export default function App() {
           <Route path="/results" element={<Results />} />
           <Route path="/browse" element={<Browse />} />
           <Route path="/saved" element={<Saved />} />
+          {/* Step 3: Naya Contact page route define kar diya */}
+          <Route path="/contact" element={<Contact />} />
           <Route path="/scheme/:slug" element={<SchemeDetail />} />
         </Routes>
       </main>
