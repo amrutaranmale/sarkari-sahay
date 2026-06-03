@@ -39,10 +39,7 @@ export default function Home() {
         <div className="hero-pattern absolute inset-0" />
         <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-saffron/25 blur-3xl" />
         <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-green-india/25 blur-3xl" />
-        {/* <div className="absolute right-8 top-1/2 hidden animate-float text-6xl opacity-20 lg:block">
-          🇮🇳
-        </div> */}
-
+        
         <div className="relative mx-auto max-w-3xl text-center">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
