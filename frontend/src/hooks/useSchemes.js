@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const API = '/api';
+const API = 'https://sarkari-sahay.onrender.com/api';
 
 export function useSchemes(filters = {}) {
   const [schemes, setSchemes] = useState([]);
