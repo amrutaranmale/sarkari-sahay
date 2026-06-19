@@ -7,6 +7,8 @@ import Saved from './pages/Saved';
 import Contact from './pages/Contact'; // <-- Step 1: Naya Contact page import kiya
 import { useSavedSchemes } from './hooks/useSavedSchemes';
 import AssistanceChatbot from './components/AssistanceChatbot';
+import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
 
 function Header() {
   const location = useLocation();
@@ -15,6 +17,7 @@ function Header() {
   const nav = [
     { to: '/', label: 'Home' },
     { to: '/browse', label: 'Browse' },
+    { to: '/blog', label: 'Blog' },
     { to: '/saved', label: 'Saved', badge: count },
   ];
 
@@ -121,15 +124,17 @@ export default function App() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-8 sm:px-6">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/results" element={<Results />} />
-          <Route path="/browse" element={<Browse />} />
-          <Route path="/saved" element={<Saved />} />
-          {/* Step 3: Naya Contact page route define kar diya */}
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/scheme/:slug" element={<SchemeDetail />} />
-        </Routes>
+      <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/results" element={<Results />} />
+  <Route path="/browse" element={<Browse />} />
+  <Route path="/saved" element={<Saved />} />
+  {/* Step 3: new Contact page route defined  */}
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/scheme/:slug" element={<SchemeDetail />} />
+  <Route path="/blog" element={<Blog />} />
+  <Route path="/blog/:slug" element={<BlogDetail />} />
+</Routes>
       </main>
       <Footer />
       <AssistanceChatbot />

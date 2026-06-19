@@ -39,7 +39,7 @@ export const centralSchemes = [
     summaryHi: 'फसल और खेती के लिए समय पर सब्सिडी वाले ब्याज पर ऋण।',
     benefitAmount: 'Up to ₹3 lakh (varies)',
     benefitType: 'loan',
-    applicationUrl: 'https://www.india.gov.in/kisan-credit-card-kcc-scheme',
+    applicationUrl: 'https://www.myscheme.gov.in/schemes/kcc',
     ministry: 'Ministry of Agriculture',
     minAge: 18, maxAge: null, minIncome: null, maxIncome: null,
     castes: ['all'], genders: ['all'], occupations: ['farmer'], disabilityRequired: false,
