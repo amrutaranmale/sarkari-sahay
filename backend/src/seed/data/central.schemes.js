@@ -67,7 +67,7 @@ export const centralSchemes = [
     summaryHi: 'मत्स्य पालन और मछुआरों के लिए बुनियादी ढांचा और उत्पादकता सहायता।',
     benefitAmount: 'Varies by component',
     benefitType: 'subsidy',
-    applicationUrl: 'https://dof.gov.in/pmmsy',
+    applicationUrl: 'https://pmmsy.dof.gov.in/',  // FIXED: was https://dof.gov.in/pmmsy
     ministry: 'Ministry of Fisheries',
     minAge: 18, maxAge: null, minIncome: null, maxIncome: null,
     castes: ['all'], genders: ['all'], occupations: ['farmer', 'self-employed'], disabilityRequired: false,
@@ -123,7 +123,7 @@ export const centralSchemes = [
     summaryHi: 'वंचित जिलों में स्वास्थ्य अवसंरचना मजबूत करना।',
     benefitAmount: 'Infrastructure access',
     benefitType: 'in-kind',
-    applicationUrl: 'https://ab-hwc.nhp.gov.in/',
+    applicationUrl: 'https://www.mohfw.gov.in/',  // FIXED: was https://ab-hwc.nhp.gov.in/ (that is HWC portal, not PM-ABHIM)
     ministry: 'Ministry of Health',
     minAge: null, maxAge: null, minIncome: null, maxIncome: null,
     castes: ['all'], genders: ['all'], occupations: ['all'], disabilityRequired: false,
@@ -137,7 +137,7 @@ export const centralSchemes = [
     summaryHi: 'गरीब मरीजों के लिए जिला अस्पतालों में मुफ्त डायलिसिस।',
     benefitAmount: 'Free dialysis sessions',
     benefitType: 'in-kind',
-    applicationUrl: 'https://nhm.gov.in/',
+    applicationUrl: 'https://pmndp.mohfw.gov.in/en',  // FIXED: was https://nhm.gov.in/ (generic NHM site)
     ministry: 'Ministry of Health',
     minAge: null, maxAge: null, minIncome: 0, maxIncome: 300000,
     castes: ['all'], genders: ['all'], occupations: ['all'], disabilityRequired: false,
